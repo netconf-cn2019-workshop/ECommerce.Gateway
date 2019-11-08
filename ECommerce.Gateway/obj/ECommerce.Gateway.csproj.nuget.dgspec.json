@@ -1,0 +1,76 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\jesse\\projects\\dotnetconf\\ECommerce.Gateway\\ECommerce.Gateway\\ECommerce.Gateway.csproj": {}
+  },
+  "projects": {
+    "C:\\jesse\\projects\\dotnetconf\\ECommerce.Gateway\\ECommerce.Gateway\\ECommerce.Gateway.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\jesse\\projects\\dotnetconf\\ECommerce.Gateway\\ECommerce.Gateway\\ECommerce.Gateway.csproj",
+        "projectName": "ECommerce.Gateway",
+        "projectPath": "C:\\jesse\\projects\\dotnetconf\\ECommerce.Gateway\\ECommerce.Gateway\\ECommerce.Gateway.csproj",
+        "packagesPath": "C:\\Users\\Jesse\\.nuget\\packages\\",
+        "outputPath": "C:\\jesse\\projects\\dotnetconf\\ECommerce.Gateway\\ECommerce.Gateway\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Jesse\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://nuget.collectin.cn/": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Ocelot": {
+              "target": "Package",
+              "version": "[13.5.2, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

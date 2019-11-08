@@ -1,0 +1,58 @@
+{
+  "ReRoutes": [
+    {
+      "DownstreamPathTemplate": "/api/Reporting",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 4001
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "BasicAuthentication",
+        "AllowedScopes": []
+      },
+      "RouteClaimsRequirement": {
+        "username": "jesse"
+      },
+      "UpstreamPathTemplate": "/Report",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Products",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 4003
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "BasicAuthentication",
+        "AllowedScopes": []
+      },
+      "UpstreamPathTemplate": "/Products",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Orders",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 4000
+        }
+      ],
+      "AddClaimsToRequest": {
+        "CustomerId": "Claims[sid] > value"
+      },
+      "AddHeadersToRequest": {
+        "CustomerId": "Claims[sid] > value"
+      },
+      "UpstreamPathTemplate": "/Orders",
+      "UpstreamHttpMethod": [ "Post", "Get" ]
+    }
+  ],
+  "GlobalConfiguration": {}
+}

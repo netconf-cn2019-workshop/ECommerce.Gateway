@@ -1,0 +1,14 @@
+C:\jesse\projects\dotnetconf\ECommerce.Gateway\ECommerce.Gateway\bin\Debug\netcoreapp2.2\ECommerce.Gateway.deps.json
+C:\jesse\projects\dotnetconf\ECommerce.Gateway\ECommerce.Gateway\bin\Debug\netcoreapp2.2\ECommerce.Gateway.runtimeconfig.json
+C:\jesse\projects\dotnetconf\ECommerce.Gateway\ECommerce.Gateway\bin\Debug\netcoreapp2.2\ECommerce.Gateway.runtimeconfig.dev.json
+C:\jesse\projects\dotnetconf\ECommerce.Gateway\ECommerce.Gateway\bin\Debug\netcoreapp2.2\ECommerce.Gateway.dll
+C:\jesse\projects\dotnetconf\ECommerce.Gateway\ECommerce.Gateway\obj\Debug\netcoreapp2.2\ECommerce.Gateway.csproj.CoreCompileInputs.cache
+C:\jesse\projects\dotnetconf\ECommerce.Gateway\ECommerce.Gateway\obj\Debug\netcoreapp2.2\ECommerce.Gateway.RazorAssemblyInfo.cache
+C:\jesse\projects\dotnetconf\ECommerce.Gateway\ECommerce.Gateway\obj\Debug\netcoreapp2.2\ECommerce.Gateway.RazorAssemblyInfo.cs
+C:\jesse\projects\dotnetconf\ECommerce.Gateway\ECommerce.Gateway\obj\Debug\netcoreapp2.2\ECommerce.Gateway.AssemblyInfoInputs.cache
+C:\jesse\projects\dotnetconf\ECommerce.Gateway\ECommerce.Gateway\obj\Debug\netcoreapp2.2\ECommerce.Gateway.AssemblyInfo.cs
+C:\jesse\projects\dotnetconf\ECommerce.Gateway\ECommerce.Gateway\obj\Debug\netcoreapp2.2\ECommerce.Gateway.RazorTargetAssemblyInfo.cache
+C:\jesse\projects\dotnetconf\ECommerce.Gateway\ECommerce.Gateway\bin\Debug\netcoreapp2.2\ECommerce.Gateway.pdb
+C:\jesse\projects\dotnetconf\ECommerce.Gateway\ECommerce.Gateway\obj\Debug\netcoreapp2.2\ECommerce.Gateway.dll
+C:\jesse\projects\dotnetconf\ECommerce.Gateway\ECommerce.Gateway\obj\Debug\netcoreapp2.2\ECommerce.Gateway.pdb
+C:\jesse\projects\dotnetconf\ECommerce.Gateway\ECommerce.Gateway\obj\Debug\netcoreapp2.2\ECommerce.Gateway.csprojAssemblyReference.cache
