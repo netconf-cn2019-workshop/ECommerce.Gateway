@@ -1,0 +1,86 @@
+
+---
+#
+# Sales Microservice Deployment + Service
+#
+apiVersion: $$INGRESS_APIVERSION
+kind: Ingress
+metadata:
+  name: gateway-ingress
+  labels:
+    app: gateway
+    tier: backend
+  annotations:
+    ingress.kubernetes.io/rewrite-target: /
+  generation: 1
+spec:
+  rules:
+  - host: gateway-$$DEPLOY_SUFFIX.$$DNS_SUFFIX
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: webapp
+          servicePort: 80
+
+---
+
+kind: Service
+apiVersion: v1
+metadata:
+  name: gateway-api
+  labels:
+    app: gateway-api
+    tier: backend
+spec:
+  selector:
+    app: gateway-api
+    tier: backend
+  ports:
+  - name: gateway-api
+    protocol: TCP
+    port: 8086
+    targetPort: 80
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gateway-api
+  labels:
+    app: gateway-api
+    tier: backend
+spec:
+  selector:
+    matchLabels:
+      app: gateway-api
+      tier: backend
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: gateway-api
+        tier: backend
+    spec:
+      containers:
+      - name: gateway-api
+        image: $$REGISTRY_SERVERgateway-api:$$IMAGE_VERSION
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 80
+        env:
+        - name: ASPNETCORE_ENVIRONMENT
+          value: "$$ENVIRONMENT_NAME"
+        - name: ASPNETCORE_ORCHESTRATOR
+          value: "k8s"
+        livenessProbe:
+          httpGet:
+            path: /health/live
+            port: 80
+          initialDelaySeconds: 3
+          periodSeconds: 3
+        readinessProbe:
+          httpGet:
+            path: /health/ready
+            port: 80
+          initialDelaySeconds: 3
+          periodSeconds: 3 

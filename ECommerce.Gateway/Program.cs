@@ -19,8 +19,14 @@ namespace ECommerce.Gateway
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-            .ConfigureAppConfiguration(builder => {
-                builder.AddJsonFile("ocelot.json");      
+            .ConfigureAppConfiguration((context,builder)=> {
+
+                var orchestrator = context.Configuration["ORCHESTRATOR"];
+                builder.SetBasePath(Directory.GetCurrentDirectory());
+                builder.AddJsonFile($"ocelot.json", optional: false);
+                builder.AddJsonFile($"ocelot.{context.HostingEnvironment.EnvironmentName}.json", optional: false);
+                builder.AddJsonFile($"ocelot.{context.HostingEnvironment.EnvironmentName}.{orchestrator}.json", optional: true);
+                builder.AddEnvironmentVariables();   
             })
                 .UseStartup<Startup>();
     }

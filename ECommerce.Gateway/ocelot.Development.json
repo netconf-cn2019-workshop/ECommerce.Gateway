@@ -6,7 +6,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 80
+          "Port": 4001
         }
       ],
       "AuthenticationOptions": {
@@ -25,7 +25,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 80
+          "Port": 4003
         }
       ],
       "AuthenticationOptions": {
@@ -41,7 +41,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 80
+          "Port": 4000
         }
       ],
       "AddClaimsToRequest": {
